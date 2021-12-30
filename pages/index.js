@@ -6,7 +6,7 @@ const Home = ({ videos }) => {
 };
 
 export const getServerSidePorps = async () => {
-  const query = '*[ _type == "video"]';
+  const query = '*[_type == "album"]';
   const videos = await sanityClient.fetch(query);
 
   if (!videos.length) {
